@@ -1,2 +1,28 @@
-<h1>Welcome#test</h1>
-<p>Find me in app/views/welcome/test.html.erb</p>
+<br>
+<div class="row">
+	<div class="col-md-6 offset-md-3">
+		<div class="card card-body bg-light">
+			<h1>Welcome to <%= @location %></h1>
+			<div class="row">
+				<div class="col-md-7">
+					<p><em>What's the weather like?</em></p>
+					<p>
+						Temperature is: <%= @temp %>&#176;
+					</p>
+					<p>
+						Cloud cover: <%= @cloudiness %>
+					</p>
+					<p>
+						Wind speed: <%= @windiness %> mph
+					</p>
+				</div>
+				<div class="col-md-5">
+					<p>
+						<%= @weather_words %>
+						<img src="http://openweathermap.org/img/w/<%= @weather_icon %>.png" alt="weather_icon">
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
